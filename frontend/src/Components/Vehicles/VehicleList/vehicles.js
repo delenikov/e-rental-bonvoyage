@@ -10,7 +10,7 @@ class Vehicles extends React.Component {
 
         this.state = {
             page: 0,
-            size: 6
+            size: 4
         }
     }
 

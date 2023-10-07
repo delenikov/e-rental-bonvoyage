@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {useNavigate} from 'react-router-dom';
 import BonVoyageService from "../../Repository/BonVoyageRepository";
 
@@ -6,13 +6,13 @@ import BonVoyageService from "../../Repository/BonVoyageRepository";
 const Register = (props) => {
 
     const navigate = useNavigate();
-    const [formData, updateFormData] = React.useState({
+    const [formData, updateFormData] = useState({
         username: "",
         password: "",
         repeatPassword: "",
         name: "/",
         surname: "/",
-        role: "ROLE_USER",
+        role: "",
     })
 
     const handleChange = (e) => {
@@ -91,10 +91,12 @@ const Register = (props) => {
                     </div>
                     <div className="form-group mt-2">
                         <label>Role</label>
-                        <select name="roles" className="form-control" onChange={handleChange}>
-                            {props.roles.map((term) =>
-                                <option key={term} value={term}>{term}</option>
-                            )}
+                        <select name="role" className="form-control" onChange={handleChange}>
+                            <option hidden>Select role</option>
+                            {
+                                props.roles.map((term) =>
+                                    <option key={term} value={term}>{term}</option>)
+                            }
                         </select>
                     </div>
                     <br/>

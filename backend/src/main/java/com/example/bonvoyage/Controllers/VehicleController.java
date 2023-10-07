@@ -17,7 +17,6 @@ import java.util.EnumSet;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = {"http://localhost:3000", "http://localhost:3001"})
 @RequestMapping(value = {"/vehicles"})
 public class VehicleController {
 

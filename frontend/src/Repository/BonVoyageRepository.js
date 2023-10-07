@@ -82,13 +82,13 @@ const BonVoyageService = {
         });
     },
     login: (username, password) => {
-        return axios.post("/api/login", {
+        return axios.post("/auth/login", {
             "username": username,
             "password": password
         });
     },
     register: (username, password, repeatPassword, name, surname, role) => {
-        return axios.post("/register", {
+        return axios.post("/auth/register", {
             "username": username,
             "password": password,
             "repeatPassword": repeatPassword,

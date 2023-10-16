@@ -10,7 +10,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 @SpringBootApplication(exclude = {SecurityAutoConfiguration.class})
 @ServletComponentScan
-
 public class BonVoyageApplication {
     public static void main(String[] args) {
         SpringApplication.run(BonVoyageApplication.class, args);
@@ -20,5 +19,4 @@ public class BonVoyageApplication {
     PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder(10);
     }
-
 }

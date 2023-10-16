@@ -3,11 +3,8 @@ import {Link, useNavigate} from 'react-router-dom';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faCartPlus} from '@fortawesome/free-solid-svg-icons'
 import Calendar from 'react-calendar'
-import VehicleTerm from "../Vehicles/VehicleTerm/VehicleTerm";
-import getActiveStartDate from "react-calendar/dist/umd/Calendar";
 
 const cartPlus = <FontAwesomeIcon icon={faCartPlus}/>
-
 
 const Cart = (props) => {
 
